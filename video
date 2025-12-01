@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>See How It Works - Lead Simple Solutions</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            background: #1a1a1a;
+            color: #ffd700;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        header {
+            background: #1a1a1a;
+            border-bottom: 3px solid #ffd700;
+            padding: 20px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo-placeholder {
+            width: 50px;
+            height: 50px;
+            background: #2a2a2a;
+            border: 2px solid #ffd700;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffd700;
+            font-size: 0.7em;
+            font-weight: 600;
+        }
+        
+        .business-name {
+            color: #ffd700;
+            font-size: 1.2em;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+        
+        .back-link {
+            color: #ffd700;
+            text-decoration: none;
+            font-size: 0.95em;
+            padding: 8px 16px;
+            border: 1px solid #ffd700;
+            border-radius: 4px;
+            transition: all 0.2s;
+        }
+        
+        .back-link:hover {
+            background: #ffd700;
+            color: #1a1a1a;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 60px 30px;
+            flex: 1;
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 15px;
+            color: #ffd700;
+        }
+        
+        .subtitle {
+            text-align: center;
+            font-size: 1.2em;
+            color: #d4af37;
+            margin-bottom: 40px;
+        }
+        
+        .video-wrapper {
+            background: #2a2a2a;
+            border: 3px solid #ffd700;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .video-placeholder {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            background: #0a0a0a;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .video-placeholder iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .placeholder-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #ffd700;
+        }
+        
+        .placeholder-content svg {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 15px;
+            opacity: 0.8;
+        }
+        
+        .placeholder-text {
+            font-size: 1.1em;
+            color: #d4af37;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+        
+        .feature-card {
+            background: #2a2a2a;
+            border: 2px solid #ffd700;
+            border-radius: 8px;
+            padding: 25px;
+            text-align: center;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.3em;
+            margin-bottom: 12px;
+            color: #ffd700;
+        }
+        
+        .feature-card p {
+            color: #d4af37;
+            line-height: 1.6;
+        }
+        
+        .cta-box {
+            background: #2a2a2a;
+            border: 3px solid #ffd700;
+            border-radius: 12px;
+            padding: 40px;
+            text-align: center;
+            margin-top: 50px;
+        }
+        
+        .cta-box h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #ffd700;
+        }
+        
+        .cta-box p {
+            font-size: 1.2em;
+            color: #d4af37;
+            margin-bottom: 30px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #ffd700;
+            color: #1a1a1a;
+            padding: 18px 40px;
+            font-size: 1.3em;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: transform 0.2s;
+        }
+        
+        .cta-button:hover {
+            transform: scale(1.05);
+            background: #ffed4e;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8em;
+            }
+            
+            .container {
+                padding: 40px 20px;
+            }
+            
+            .business-name {
+                font-size: 1em;
+            }
+            
+            .back-link {
+                font-size: 0.85em;
+                padding: 6px 12px;
+            }
+            
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-area">
+            <div class="logo-placeholder">LOGO</div>
+            <div class="business-name">Lead Simple Solutions</div>
+        </div>
+        <a href="#" class="back-link">← Back to Audit</a>
+    </header>
+    
+    <div class="container">
+        <h1>See How The System Works</h1>
+        <p class="subtitle">Watch how our lead capture system turns website visitors into paying customers</p>
+        
+        <div class="video-wrapper">
+            <div class="video-placeholder">
+                <!-- Replace this div with your actual video embed code -->
+                <!-- Example for YouTube: <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                <!-- Example for Vimeo: <iframe src="https://player.vimeo.com/video/YOUR_VIDEO_ID" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe> -->
+                <!-- Example for Loom: <iframe src="https://www.loom.com/embed/YOUR_VIDEO_ID" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
+                
+                <div class="placeholder-content">
+                    <svg fill="#ffd700" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 5v14l11-7z"/>
+                    </svg>
+                    <div class="placeholder-text">Your demo video goes here<br><small style="font-size: 0.85em;">(Replace with iframe embed code)</small></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>⚡ Instant Alerts</h3>
+                <p>Get texted the second someone submits a form. No more missed opportunities.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3>🤖 Auto-Response</h3>
+                <p>Leads get an instant text back so they know you're on it. They stop calling competitors.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3>🌙 24/7 Capture</h3>
+                <p>Works while you sleep. Capture after-hours leads and follow up in the morning.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3>💬 Smart Chatbot</h3>
+                <p>Answers common questions and captures contact info before they leave your site.</p>
+            </div>
+        </div>
+        
+        <div class="cta-box">
+            <h2>Ready to Stop Losing Leads?</h2>
+            <p>Let's build you a lead-capture system that actually works.</p>
+            <a href="mailto:your-email@example.com" class="cta-button">Get Started →</a>
+        </div>
+    </div>
+</body>
+</html>
