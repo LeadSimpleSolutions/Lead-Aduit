@@ -278,10 +278,31 @@
         </div>
         
         <div class="cta-box">
-            <h2>Ready to Stop Losing Leads?</h2>
-            <p>Let's build you a lead-capture system that actually works.</p>
-            <a href="mailto:your-email@example.com" class="cta-button">Get Started →</a>
-        </div>
+    <h2>Ready to Stop Losing Leads?</h2>
+    <p>Let's build you a lead-capture system that actually works.</p>
+
+    <!-- This is where the Google button will load -->
+    <div id="calendar-btn"></div>
+
+    <!-- Google Calendar Appointment Scheduling begin -->
+    <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+    <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+    <script>
+    (function() {
+      var target = document.getElementById('calendar-btn');
+      window.addEventListener('load', function() {
+        calendar.schedulingButton.load({
+          url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ3MASMLI8-vcRoS8OHWrgAbath1U1N82KyrRJqwfY9eK8_B5RddJPvIXSIFsxlQ-Hqju7GIq-NF?gv=true',
+          color: '#039BE5',
+          label: 'Book an appointment',
+          target: target,
+        });
+      });
+    })();
+    </script>
+    <!-- end Google Calendar Appointment Scheduling -->
+</div>
+
     </div>
 </body>
 </html>
